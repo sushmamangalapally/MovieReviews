@@ -1,0 +1,97 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+/* .movie_listings{
+  margin: auto;
+  width: 800px;
+}
+*/
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+html{
+  height: 100%;
+}
+body{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+34,8f0222+51,8f0222+66,6d0019+100 */
+background: #a90329; /* Old browsers */
+background: -moz-linear-gradient(top, #a90329 0%, #8f0222 34%, #8f0222 51%, #8f0222 66%, #6d0019 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 34%,#8f0222 51%,#8f0222 66%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #a90329 0%,#8f0222 34%,#8f0222 51%,#8f0222 66%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+height: 100%;
+font-family: 'Fjalla One', sans-serif;
+
+}
+.nav{
+  height: 100%;
+  background: #E8ECF0;
+  margin-left:10px;   
+}
+
+.moviesMain{
+  /* background: #E8ECF0; */
+  /* border: 5px solid whitesmoke; */
+}
+.a_movie{
+  margin: 15px;
+  /* width: 320px; */
+  height: 505px;
+  background: #E8ECF0;
+} 
+
+.movie_listings h1, .movie_fav h3, .movie_watch h3{
+  color: whitesmoke;
+}
+
+.container > h1, .movie_title > h3, .movie_fav > h3, .movie_listings h1, .movie_watch h3{
+  text-align: center;
+}
+
+.poster{
+  width: 70%;
+}
+
+.material-icons:hover{
+  cursor: pointer;
+}
+
+.img-content{
+  padding-top: 10px;
+}
+
+img.poster:hover{
+  box-shadow: 10px 10px 5px grey;
+  width: 75%;
+}
+
+i.iconsChange{
+  display: inline-block;
+}
