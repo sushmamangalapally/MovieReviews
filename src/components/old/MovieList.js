@@ -2,7 +2,9 @@ import React from 'react';
 // import movies_list from '../movies.json';
 import Movie from './Movie';
 import '../css/App.css';
+const API_KEY = '7107cc88cc38939ff1dc0ecdee74365c';
 
+// console.log(process.env)
 
 class MovieList extends React.Component{
     constructor(props) {
@@ -13,7 +15,7 @@ class MovieList extends React.Component{
       }
     
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=7107cc88cc38939ff1dc0ecdee74365c&language=en-US&page=1")
+        fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`)
         .then(res => res.json())
         .then(
             json => {

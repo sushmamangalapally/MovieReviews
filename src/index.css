@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+      
+span.card-title {
+  color: gold;
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 2px;
+}
