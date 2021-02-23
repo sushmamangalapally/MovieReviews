@@ -31,67 +31,131 @@
   width: 800px;
 }
 */
-*{
-  margin: 0;
-  padding: 0;
-  
+* {
+    margin: 0;
+    padding: 0;
 }
-html{
-  height: 100%;
+html {
+    height: 100%;
 }
-body{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+34,8f0222+51,8f0222+66,6d0019+100 */
-background: #a90329; /* Old browsers */
-background: -moz-linear-gradient(top, #a90329 0%, #8f0222 34%, #8f0222 51%, #8f0222 66%, #6d0019 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 34%,#8f0222 51%,#8f0222 66%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #a90329 0%,#8f0222 34%,#8f0222 51%,#8f0222 66%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
-height: 100%;
-font-family: 'Fjalla One', sans-serif;
-
+body {
+  background: #3e1735;
+  color: white;
 }
-.nav{
-  height: 100%;
-  background: #E8ECF0;
-  margin-left:10px;   
+ul#slide-out {
+    background: #5f0f40;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+34,8f0222+51,8f0222+66,6d0019+100 */
+    /*
+    background: #a90329;
+    background: -moz-linear-gradient(
+        top,
+        #a90329 0%,
+        #8f0222 34%,
+        #8f0222 51%,
+        #8f0222 66%,
+        #6d0019 100%
+    );
+    background: -webkit-linear-gradient(
+        top,
+        #a90329 0%,
+        #8f0222 34%,
+        #8f0222 51%,
+        #8f0222 66%,
+        #6d0019 100%
+    ); 
+    background: linear-gradient(
+        to bottom,
+        #a90329 0%,
+        #8f0222 34%,
+        #8f0222 51%,
+        #8f0222 66%,
+        #6d0019 100%
+    ); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+     */
+    height: 100%;
+    font-family: "Fjalla One", sans-serif;
 }
-
-.moviesMain{
-  /* background: #E8ECF0; */
-  /* border: 5px solid whitesmoke; */
-}
-.a_movie{
-  margin: 15px;
-  /* width: 320px; */
-  height: 505px;
-  background: #E8ECF0;
-} 
-
-.movie_listings h1, .movie_fav h3, .movie_watch h3{
-  color: whitesmoke;
-}
-
-.container > h1, .movie_title > h3, .movie_fav > h3, .movie_listings h1, .movie_watch h3{
-  text-align: center;
-}
-
-.poster{
-  width: 70%;
-}
-
-.material-icons:hover{
-  cursor: pointer;
-}
-
-.img-content{
-  padding-top: 10px;
+.nav {
+    height: 100%;
+    background: #9a031e;
+    margin-left: 10px;
 }
 
-img.poster:hover{
-  box-shadow: 10px 10px 5px grey;
-  width: 75%;
+.moviesMain {
+    /* background: #E8ECF0; */
+    /* border: 5px solid whitesmoke; */
+}
+.a_movie {
+    margin: 15px;
+    /* width: 320px; */
+    height: 505px;
+    background: #e8ecf0;
 }
 
-i.iconsChange{
-  display: inline-block;
+.movie_listings h1,
+.movie_fav h3,
+.movie_watch h3 {
+    color: whitesmoke;
+}
+
+.container > h1,
+.movie_title > h3,
+.movie_fav > h3,
+.movie_listings h1,
+.movie_watch h3 {
+    text-align: center;
+}
+
+.poster {
+    width: 70%;
+}
+
+.material-icons:hover {
+    cursor: pointer;
+}
+
+.img-content {
+    padding-top: 10px;
+}
+
+img.poster:hover {
+    box-shadow: 10px 10px 5px grey;
+    width: 75%;
+}
+
+i.iconsChange {
+    display: inline-block;
+}
+
+/* .section {
+  background: #e36414
+}
+
+div.section {
+  background: #fb8b24;
+} */
+
+p.btn-small, a.btn-small {
+  background: #0f4c5c;
+}
+
+nav.top-nav {
+  background: #77164d
+}
+
+.sidenav li>a, .sidenav li>a>i {
+  color: white;
+}
+
+.row .col.s3.movie-card {
+  min-height: 650px;
+  max-height: 650px;
+  /* padding-bottom: 5px; */
+}
+
+.col-content {
+  background:#6d496d;
+  padding-bottom: 15px;
+
 }
