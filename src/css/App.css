@@ -144,7 +144,7 @@ nav.top-nav {
   background: #77164d
 }
 
-.sidenav li>a, .sidenav li>a>i {
+.sidenav li>a, .sidenav li>a>i.material-icons {
   color: white;
 }
 
