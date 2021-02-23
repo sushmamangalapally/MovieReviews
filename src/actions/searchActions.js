@@ -7,7 +7,6 @@ import {
     FETCH_RANDOM_MOVIES,
 } from "./types";
 import axios from "axios";
-// const API_KEY = "7107cc88cc38939ff1dc0ecdee74365c";
 const API_KEY = process.env.REACT_APP_API_KEY  
 
 export const searchMovie = (text) => (dispatch) => {
