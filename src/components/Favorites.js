@@ -7,7 +7,16 @@ import { addToFavorites, removeFromFavorites } from "../actions/listActions";
 import MovieCard from "./MovieCard";
 export class Favorites extends Component {
     render() {
-        return <MoviesContainer type="favorite" />;
+        const {moviesList}  = this.props;
+        const notEmpty = moviesList && moviesList.favoritesMoviesList && moviesList.favoritesMoviesList.length !== 0;
+
+        return (
+            <React.Fragment>
+                <h3>Favorites</h3>
+                {!notEmpty ? <p>No list yet</p> : null}
+                <MoviesContainer type="favorite" />
+            </React.Fragment>
+        );
     }
 }
 

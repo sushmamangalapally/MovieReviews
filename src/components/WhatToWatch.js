@@ -91,7 +91,7 @@ function WhatToWatch({
                                         </select>
                                     </label>
                                     <br />
-                                    <input type="submit" value="Submit" />
+                                    <input type="submit" className="btn btn-primary btn-bg mt-3" value="Submit" />
                                 </form>
                             </div>
                             {showChangeButton === true && movie && (

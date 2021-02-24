@@ -6,7 +6,16 @@ import Spinner from "./Spinner";
 import MovieCard from "./MovieCard";
 export class Bookmark extends Component {
     render() {
-        return <MoviesContainer type="bookmark" />;
+        const {moviesList}  = this.props;
+        const notEmpty = moviesList && moviesList.bookmarkMoviesList && moviesList.bookmarkMoviesList.length !== 0;
+
+        return (
+            <React.Fragment>
+                <h3>Bookmarks</h3>
+                {!notEmpty ? <p>No list yet</p> : null}
+                <MoviesContainer type="bookmark" />
+            </React.Fragment>
+        );
     }
 }
 

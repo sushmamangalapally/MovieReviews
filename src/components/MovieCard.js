@@ -109,7 +109,7 @@ export class MovieCard extends Component {
                                     : missingImg
                             }
                             alt={"Poster of " + movieInfo.title}
-                            style={{ width: "255px", height: "370px" }}
+                            style={{ width: "100%", height: "370px" }}
                         />
                     </div>
                     <div className="info-content">
@@ -150,7 +150,7 @@ export class MovieCard extends Component {
                             <i class="material-icons">favorite_border</i>
                         )}
                     </p>
-                    <br />
+                    
                     <p
                         className="iconsChange waves-effect waves-light btn-small"
                         onClick={this.watchOrNotWatch}
@@ -163,7 +163,7 @@ export class MovieCard extends Component {
                             <i class="material-icons">playlist_add</i>
                         )}
                     </p>
-                    <br />
+                   
                     <p
                         className="iconsChange waves-effect waves-light btn-small"
                         onClick={this.bookmarkOrUnbookmark}

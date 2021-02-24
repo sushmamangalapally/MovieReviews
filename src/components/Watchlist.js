@@ -6,7 +6,16 @@ import Spinner from "./Spinner";
 import MovieCard from "./MovieCard";
 export class Watchlist extends Component {
     render() {
-        return <MoviesContainer type="watchlist" />;
+        const {moviesList}  = this.props;
+        const notEmpty = moviesList && moviesList.watchMoviesList && moviesList.watchMoviesList.length !== 0;
+
+        return (
+            <React.Fragment>
+                <h3>Watchlist</h3>
+                {!notEmpty ? <p>No list yet</p> : null}
+                <MoviesContainer type="watchlist" />
+            </React.Fragment>
+        );
     }
 }
 
