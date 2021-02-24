@@ -1,3 +1,4 @@
+/* eslint-disable react/no-direct-mutation-state */
 import React from 'react';
 import '../css/App.css';
 

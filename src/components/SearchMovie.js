@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import SearchForm from "./SearchForm";
 import { connect } from "react-redux";
-import MoviesContainer from "./MoviesContainer";
-import Spinner from "./Spinner";
-import { fetchPopularMovies, setLoading } from "../actions/searchActions";
 import MovieCard from "./MovieCard";
 export class SearchMovie extends Component {
     render() {

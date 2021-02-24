@@ -1,6 +1,8 @@
-![](2hob7j.gif)
+<!-- ![](2hob7j.gif)
 
-## https://youtu.be/4wn0WBDccyo
+## https://youtu.be/4wn0WBDccyo -->
+
+## https://sushmamangalapally.github.io/MovieReviews/
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

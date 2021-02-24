@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import MovieCard from "./MovieCard";
-import { fetchRandomMovie, setLoading } from "../actions/searchActions";
+import { fetchRandomMovie } from "../actions/searchActions";
 
 function WhatToWatch({
     favoritesMoviesList,
@@ -63,7 +63,7 @@ function WhatToWatch({
                     <div className="container">
                         <div className="row">
                             <p>Movies Roulette</p>
-                            <div class="input-field col s12">
+                            <div className="input-field col s12">
                                 <form onSubmit={handleSubmit}>
                                     <label>
                                         What should you watch?

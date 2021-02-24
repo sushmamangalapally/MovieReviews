@@ -21,32 +21,32 @@ function Navbar() {
             <ul id="slide-out" className="sidenav sidenav-fixed">
                 <li>
                     <Link to="/">
-                        <i class="material-icons">home</i>Home
+                        <i className="material-icons">home</i>Home
                     </Link>
                 </li>
                 <li>
                     <Link to="/search">
-                        <i class="material-icons">search</i>Search
+                        <i className="material-icons">search</i>Search
                     </Link>
                 </li>
                 <li>
                     <Link to="/favorites">
-                        <i class="material-icons">favorite_border</i>Favorites
+                        <i className="material-icons">favorite_border</i>Favorites
                     </Link>
                 </li>
                 <li>
                     <Link to="/bookmark">
-                        <i class="material-icons">bookmark_border</i>Bookmark
+                        <i className="material-icons">bookmark_border</i>Bookmark
                     </Link>
                 </li>
                 <li>
                     <Link to="/watchlater">
-                        <i class="material-icons">playlist_add</i> Watch Later
+                        <i className="material-icons">playlist_add</i> Watch Later
                     </Link>
                 </li>
                 <li>
                     <Link to="/whattowatch">
-                        <i class="material-icons">tv</i> What to Watch?
+                        <i className="material-icons">tv</i> What to Watch?
                     </Link>
                 </li>
             </ul>

@@ -12,7 +12,6 @@ export class MovieDetail extends Component {
     render() {
         const { movie, loading } = this.props;
         let movieDeets = (
-            // <React.Fragment>
             <main>
                 <div className="container">
                     <div className="row">
@@ -52,7 +51,6 @@ export class MovieDetail extends Component {
                     </div>
                 </div>
             </main>
-            // </React.Fragment>
         );
         return loading ? (
             <main>

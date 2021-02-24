@@ -7,6 +7,7 @@ import {
     FETCH_RANDOM_MOVIES,
 } from "./types";
 import axios from "axios";
+// eslint-disable-next-line no-undef
 const API_KEY = process.env.REACT_APP_API_KEY  
 
 export const searchMovie = (text) => (dispatch) => {
@@ -33,7 +34,7 @@ export const fetchMovies = (text) => (dispatch) => {
         .catch((error) => console.log(error));
 };
 
-export const fetchPopularMovies = (text) => (dispatch) => {
+export const fetchPopularMovies = () => (dispatch) => {
     axios
         .get(
             `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1&include_adult=false`
