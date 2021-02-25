@@ -103,7 +103,7 @@ export const MovieCard = (props) => {
   return (
     <div className={changeMainStyle} key={index}>
       <div className="col-content ">
-        <div className="img-content">
+        <div className="img-content" role="img" aria-label="Poster of the movie">
           <img
             className="poster"
             src={
@@ -117,7 +117,7 @@ export const MovieCard = (props) => {
           />
         </div>
         <div className="info-content">
-          <h5>{movieInfo.title}</h5>
+          <span>{movieInfo.title}</span>
           <p>{movieInfo.release_date}</p>
           {/*
                             <Ratings index={index} id={details["id"]} get_rating={emptyRating} get_date={notReleasedYet}/>
@@ -146,7 +146,7 @@ export const MovieCard = (props) => {
           type="button"
           className="iconsChange waves-effect waves-light btn-small"
           onClick={favoriteOrUnfavorite}
-          onKeyDown={favoriteOrUnfavorite}
+          onKeyPress={favoriteOrUnfavorite}
         >
           {props.favoritesMoviesList.find(
             (movieId) => movieId.id === movieInfo.id,

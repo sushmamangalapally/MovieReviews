@@ -217,3 +217,25 @@ div.movieWatchRol span {
 div.movieWatchRol input[type="submit"] {
   margin: 0;
 }
+
+div.top-nav {
+  height: 70px;
+  background: #77164d;
+  color: #fff;
+}
+
+
+div.top-nav a {
+  color: #fff;
+}
+
+.info-content span {
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+    font-weight: 400;
+}

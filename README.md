@@ -4,6 +4,10 @@
 
 ## https://sushmamangalapally.github.io/MovieReviews/
 
+- Things to do:
+ - Fix accessibilty issues
+ - Add inifinite pagination for landing page and search page
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
