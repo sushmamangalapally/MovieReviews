@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MovieReviews/static/css/main.91bd3d11.chunk.css",
+    "main.css": "/MovieReviews/static/css/main.3a66220f.chunk.css",
     "main.js": "/MovieReviews/static/js/main.3af80937.chunk.js",
     "main.js.map": "/MovieReviews/static/js/main.3af80937.chunk.js.map",
     "runtime-main.js": "/MovieReviews/static/js/runtime-main.6236c35c.js",
@@ -8,14 +8,14 @@
     "static/js/2.6b6c5a83.chunk.js": "/MovieReviews/static/js/2.6b6c5a83.chunk.js",
     "static/js/2.6b6c5a83.chunk.js.map": "/MovieReviews/static/js/2.6b6c5a83.chunk.js.map",
     "index.html": "/MovieReviews/index.html",
-    "static/css/main.91bd3d11.chunk.css.map": "/MovieReviews/static/css/main.91bd3d11.chunk.css.map",
+    "static/css/main.3a66220f.chunk.css.map": "/MovieReviews/static/css/main.3a66220f.chunk.css.map",
     "static/js/2.6b6c5a83.chunk.js.LICENSE.txt": "/MovieReviews/static/js/2.6b6c5a83.chunk.js.LICENSE.txt",
     "static/media/Spinner-1s-200px.b5d58eb0.gif": "/MovieReviews/static/media/Spinner-1s-200px.b5d58eb0.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.6236c35c.js",
     "static/js/2.6b6c5a83.chunk.js",
-    "static/css/main.91bd3d11.chunk.css",
+    "static/css/main.3a66220f.chunk.css",
     "static/js/main.3af80937.chunk.js"
   ]
 }
