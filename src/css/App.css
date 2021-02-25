@@ -41,6 +41,7 @@ html {
 body {
   background: #3e1735;
   color: white;
+  font-family: "Fjalla One", sans-serif;
 }
 @media only screen and (min-width: 993px) {
   body {
@@ -79,7 +80,6 @@ ul#slide-out {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
      */
     height: 100%;
-    font-family: "Fjalla One", sans-serif;
 }
 .nav {
     height: 100%;
@@ -141,7 +141,7 @@ div.section {
   background: #fb8b24;
 } */
 
-p.btn-small, a.btn-small, button[type="submit"], input[type="submit"], button.btn {
+p.btn-small, a.btn-small, button[type="submit"], input[type="submit"], button.btn, button[type="button"] {
   background: #0f4c5c;
   margin: 0 5px;
 }
@@ -152,6 +152,7 @@ nav.top-nav {
 
 .sidenav li>a, .sidenav li>a>i.material-icons {
   color: white;
+  font-size: 1.3rem;
 }
 
 .row .col.s3.movie-card {
@@ -185,4 +186,34 @@ footer {
 
 nav.top-nav {
   height: 70px;
+}
+
+footer a {
+  color: white;
+  font-weight: bold;
+}
+
+h1.header {
+  font-size: 3.2rem;
+  line-height: 0;
+}
+
+div.card {
+  background: #452450;
+}
+
+div.listContainer {
+  margin-left: 10px;
+}
+
+div.listContainer h2, div.jumbotron h2, h2.movieRol {
+  font-size: 2.92rem;
+}
+
+div.movieWatchRol span {
+  font-size: 1.7em;
+}
+
+div.movieWatchRol input[type="submit"] {
+  margin: 0;
 }
