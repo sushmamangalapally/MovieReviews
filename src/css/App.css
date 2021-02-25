@@ -175,6 +175,9 @@ nav.top-nav {
   header, main, footer {
     padding-left: 0;
   }
+  h1.header {
+    margin-left: 2em;
+  }
 }
 
 footer {
@@ -238,4 +241,11 @@ div.top-nav a {
     line-height: 110%;
     margin: 1.0933333333rem 0 .656rem 0;
     font-weight: 400;
+}
+
+h1.header {
+  margin: 2.8rem 0 1.68rem 0;
+  margin-top: 2.8rem;
+  margin-bottom: 1.68rem;
+  margin-left: 2.5em;
 }
