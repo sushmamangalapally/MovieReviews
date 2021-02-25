@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect } from 'react';
@@ -19,6 +20,8 @@ export const MovieDetail = (props) => {
   //     props.setLoading();
   //   }
   const { movie, loading } = props;
+  const genresArr = (movie && movie.genres) ? movie.genres.reduce((a, b) => [...a, b.name], []) : [];
+  const genres = genresArr.join(', ');
   const movieDeets = (
     <main>
       <div className="container">
@@ -48,8 +51,21 @@ export const MovieDetail = (props) => {
                 <p>{movie.overview}</p>
               </div>
               <div className="card-action">
-                <p>{movie.popularity}</p>
-                <p>{movie.release_date}</p>
+                <p>
+                  Genres:
+                  {' '}
+                  {genres}
+                </p>
+                <p>
+                  {movie.runtime}
+                  {' '}
+                  minutes
+                </p>
+                <p>
+                  Released:
+                  {' '}
+                  {movie.release_date}
+                </p>
               </div>
               <div className="card-action">
                 <Link to="/">Go back to home page.</Link>
