@@ -29,6 +29,7 @@ export const fetchMovies = (text) => (dispatch) => {
         type: FETCH_MOVIES,
         payload: response.data.results,
         loading: false,
+        noMovies: (response.data.results.length === 0),
       });
     })
     .catch((error) => console.log(error));

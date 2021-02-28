@@ -9,7 +9,7 @@ import MovieCard from './MovieCard';
 
 export const MoviesContainer = (props) => {
   const {
-    movies, text, type, favoritesMoviesList, bookmarkMoviesList, watchMoviesList,
+    movies, text, type, favoritesMoviesList, bookmarkMoviesList, watchMoviesList, noMovies,
   } = props;
   let content = '';
   let moviesList = [];
@@ -27,7 +27,7 @@ export const MoviesContainer = (props) => {
     moviesList.map((movie) => (
       <MovieCard key={movie.id} movie={movie} />
     ))
-  ) : text && text.length ? (
+  ) : (text && text.length && noMovies === true) ? (
     <p>Sorry, no results found!</p>
   ) : null;
   return (
@@ -43,5 +43,6 @@ const mapStateToProps = (state) => ({
   bookmarkMoviesList: state.moviesList.bookmarkMoviesList,
   movies: state.movies.movies,
   text: state.movies.text,
+  noMovies: state.movies.noMovies,
 });
 export default connect(mapStateToProps)(MoviesContainer);

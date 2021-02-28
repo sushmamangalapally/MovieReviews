@@ -14,6 +14,7 @@ const initialState = {
   loading: false,
   movie: [],
   randomMovies: [],
+  noMovies: false,
 };
 
 export default function (state = initialState, action) {
@@ -22,12 +23,14 @@ export default function (state = initialState, action) {
       return {
         ...state,
         text: action.payload,
+        movies: [],
         loading: false,
       };
     case FETCH_MOVIES:
       return {
         ...state,
         movies: action.payload,
+        noMovies: (action.payload.length === 0),
         loading: false,
       };
     case FETCH_MOVIE:
