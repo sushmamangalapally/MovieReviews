@@ -64,7 +64,7 @@ function WhatToWatch({
               Movies Roulette
             </h2>
             <div className="input-field col s12 movieWatchRol">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} keyPress={handleSubmit}>
                 <label htmlFor="What should you watch?">
                   <span>What should you watch?</span>
                   <select
@@ -72,6 +72,7 @@ function WhatToWatch({
                         //   defaultValue={selectAns}
                     style={{ display: 'block' }}
                     onChange={handleChange}
+                    keyPress={handleChange}
                   >
                     <option value="" disabled selected>
                       Choose your option
