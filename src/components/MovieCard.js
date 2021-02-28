@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
@@ -15,78 +16,87 @@ import {
   removeFromBookmark,
 } from '../actions/listActions';
 
-export const MovieCard = (props) => {
-  const [fave, setFave] = useState(props.favoritesMoviesList
-    ? props.favoritesMoviesList.find(
-      (favMov) => favMov.id === props.movie.id,
+export const MovieCard = ({
+  favoritesMoviesList,
+  bookmarkMoviesList,
+  movie,
+  watchMoviesList,
+  key,
+  main,
+  addToFavorites,
+  removeFromFavorites,
+  addToWatchlist,
+  removeFromWatchlist,
+  addToBookmark,
+  removeFromBookmark,
+}) => {
+  const [fave, setFave] = useState(favoritesMoviesList
+    ? favoritesMoviesList.find(
+      (favMov) => favMov.id === movie.id,
     )
     : false);
-  const [bookMrk, setBookMrk] = useState(props.bookmarkMoviesList
-    ? props.bookmarkMoviesList.find(
-      (bkmrkMov) => bkmrkMov.id === props.movie.id,
+  const [bookMrk, setBookMrk] = useState(bookmarkMoviesList
+    ? bookmarkMoviesList.find(
+      (bkmrkMov) => bkmrkMov.id === movie.id,
     )
     : false);
-  const [watch, setWatch] = useState(props.watchMoviesList
-    ? props.watchMoviesList.find(
-      (watchMov) => watchMov.id === props.movie.id,
+  const [watch, setWatch] = useState(watchMoviesList
+    ? watchMoviesList.find(
+      (watchMov) => watchMov.id === movie.id,
     )
     : false);
   function favoriteOrUnfavorite(e) {
     e.preventDefault();
-    console.log(this);
-    const faveMovies = props.favoritesMoviesList
-      ? props.favoritesMoviesList
-      : [];
+    // console.log(this);
+    const faveMovies = favoritesMoviesList || [];
     const isFave = faveMovies
-      ? faveMovies.find((favMov) => favMov.id === props.movie.id)
+      ? faveMovies.find((favMov) => favMov.id === movie.id)
       : null;
     if (isFave) {
-      props.removeFromFavorites(faveMovies, props.movie);
+      removeFromFavorites(faveMovies, movie);
     } else {
-      props.addToFavorites(faveMovies, props.movie);
+      addToFavorites(faveMovies, movie);
     }
     setFave(!fave);
   }
   function bookmarkOrUnbookmark(e) {
     e.preventDefault();
-    const bookmarkMovies = props.bookmarkMoviesList
-      ? props.bookmarkMoviesList
-      : [];
+    const bookmarkMovies = bookmarkMoviesList || [];
     const isBookmarked = bookmarkMovies
       ? bookmarkMovies.find(
-        (bookmark) => bookmark.id === props.movie.id,
+        (bookmark) => bookmark.id === movie.id,
       )
       : null;
     if (isBookmarked) {
-      props.removeFromBookmark(bookmarkMovies, props.movie);
+      removeFromBookmark(bookmarkMovies, movie);
     } else {
-      props.addToBookmark(bookmarkMovies, props.movie);
+      addToBookmark(bookmarkMovies, movie);
     }
     setBookMrk(!bookMrk);
   }
   function watchOrNotWatch(e) {
     e.preventDefault();
-    console.log(this);
-    const watchListMovies = props.watchMoviesList
-      ? props.watchMoviesList
-      : [];
+    // console.log(this);
+    const watchListMovies = watchMoviesList || [];
     const isAddedToWatchList = watchListMovies
       ? watchListMovies.find(
-        (watchMovie) => watchMovie.id === props.movie.id,
+        (watchMovie) => watchMovie.id === movie.id,
       )
       : null;
     if (isAddedToWatchList) {
-      props.removeFromWatchlist(watchListMovies, props.movie);
+      removeFromWatchlist(watchListMovies, movie);
     } else {
-      props.addToWatchlist(watchListMovies, props.movie);
+      addToWatchlist(watchListMovies, movie);
     }
     setWatch(!watch);
   }
 
-  const movie = props;
-  const movieInfo = movie.movie;
-  const index = props.key;
-  const changeMainStyle = props.main === 'true' ? 'col s12 center-align z-depth-5 movie-card' : 'col s3 center-align z-depth-5 movie-card';
+  // console.log('moviessss ');
+  // console.log(movie);
+
+  const movieInfo = movie;
+  const index = key;
+  const changeMainStyle = main === 'true' ? 'col s12 center-align z-depth-5 movie-card' : 'col s3 center-align z-depth-5 movie-card';
   const divLandingStyle = {
     width: '100%',
     height: '370px',
@@ -95,9 +105,9 @@ export const MovieCard = (props) => {
     width: '330px',
     height: '550px',
   };
-  const changeMainImgStyle = props.main === 'true' ? divQuizStyle : divLandingStyle;
-  //   const faveMovies = props.moviesList && props.moviesList.favoritesMoviesList
-  //     ? props.moviesList.favoritesMoviesList
+  const changeMainImgStyle = main === 'true' ? divQuizStyle : divLandingStyle;
+  //   const faveMovies = moviesList && moviesList.favoritesMoviesList
+  //     ? moviesList.favoritesMoviesList
   //     : null;
 
   return (
@@ -148,7 +158,7 @@ export const MovieCard = (props) => {
           onClick={favoriteOrUnfavorite}
           onKeyPress={favoriteOrUnfavorite}
         >
-          {props.favoritesMoviesList.find(
+          {favoritesMoviesList.find(
             (movieId) => movieId.id === movieInfo.id,
           ) ? (
             <i className="material-icons">favorite</i>
@@ -161,9 +171,9 @@ export const MovieCard = (props) => {
           type="button"
           className="iconsChange waves-effect waves-light btn-small"
           onClick={watchOrNotWatch}
-          onKeyDown={watchOrNotWatch}
+          onKeyPress={watchOrNotWatch}
         >
-          {props.watchMoviesList.find(
+          {watchMoviesList.find(
             (movieId) => movieId.id === movieInfo.id,
           ) ? (
             <i className="material-icons">playlist_add_check</i>
@@ -176,9 +186,9 @@ export const MovieCard = (props) => {
           type="button"
           className="iconsChange waves-effect waves-light btn-small"
           onClick={bookmarkOrUnbookmark}
-          onKeyDown={bookmarkOrUnbookmark}
+          onKeyPress={bookmarkOrUnbookmark}
         >
-          {props.bookmarkMoviesList.find(
+          {bookmarkMoviesList.find(
             (movieId) => movieId.id === movieInfo.id,
           ) ? (
             <i className="material-icons">bookmark</i>
