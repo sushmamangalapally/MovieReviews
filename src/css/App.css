@@ -253,3 +253,50 @@ h1.header {
 form#searchForm input[type="text"] {
   background: white;
 }
+
+a#skip-to-content-anchor {
+    position: absolute;
+    left: -1000px;
+}
+
+.ant-layout-content {
+  padding: 0 50px;
+  }
+  .layout {
+  height: 100vh;
+  }
+  .site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 70vh;
+  box-shadow: black;
+  margin-bottom: 2px;
+  }
+  .site-layout-content:focus {
+  border: 2px solid red;
+  }
+  .skip-to-content-invisible {
+  position: absolute;
+  left: -1000px;
+  }
+  .skip-to-content-visible {
+  position: static;
+  height: 8vh;
+  font-weight: 500;
+  font-size: large;
+  width: 100%;
+  background: #cce9f9;
+  padding: 2px 2px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: gray;
+  }
+  a > u {
+  display: block;
+  margin: 0 auto;
+  border: 2px dodgerblue dashed;
+  height: 100%;
+  width: 100%;
+  color: black;
+  padding-left: 14px;
+  }

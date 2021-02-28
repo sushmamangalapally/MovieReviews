@@ -29,13 +29,14 @@ export const SearchForm = (props) => {
         {' '}
         Search for a movie...
       </h2>
-      <form id="searchForm" role="search" onSubmit={onSubmit}>
+      <form id="searchForm" role="search" onSubmit={onSubmit} keyPress={onSubmit}>
         <input
           type="text"
           className="form-control"
           name="searchText"
           placeholder="Search Movies, TV Series ..."
           onChange={onChange}
+          keyPress={onChange}
         />
         <button
           type="submit"
