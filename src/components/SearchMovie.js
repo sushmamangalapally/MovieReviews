@@ -9,15 +9,18 @@ import SearchForm from './SearchForm';
 import MovieCard from './MovieCard';
 
 export const SearchMovie = (props) => {
-  const { movies, text } = props;
+  const { movies, text, noMovies } = props;
   let content = '';
+  console.log(props);
 
   content = movies && movies.length > 0 ? (
     movies.map((movie) => (
       <MovieCard key={movie.id} movie={movie} />
     ))
-  ) : text.length ? (
-    <p>Sorry, no results found!</p>
+  ) : (text.length && movies.length === 0 && noMovies === true) ? (
+    <p>
+      Sorry, no results found!
+    </p>
   ) : null;
   return (
     <main>
@@ -40,5 +43,6 @@ const mapStateToProps = (state) => ({
   movies: state.movies.movies,
   text: state.movies.text,
   loading: state.movies.loading,
+  noMovies: state.movies.noMovies,
 });
 export default connect(mapStateToProps)(SearchMovie);

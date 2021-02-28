@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/prop-types */
 /* eslint-disable max-len */
@@ -7,8 +8,9 @@ import { connect } from 'react-redux';
 import MoviesContainer from './MoviesContainer';
 import { addToFavorites, removeFromFavorites } from '../actions/listActions';
 
-export const Favorites = (props) => {
-  const { moviesList } = props;
+export const Favorites = ({
+  moviesList,
+}) => {
   const notEmpty = moviesList && moviesList.favoritesMoviesList && moviesList.favoritesMoviesList.length !== 0;
 
   return (

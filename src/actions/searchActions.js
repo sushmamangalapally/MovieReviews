@@ -10,7 +10,7 @@ import {
 // eslint-disable-next-line no-undef
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export const searchMovie = (text) => (dispatch) => {
+export const searchMovie = (page, text) => (dispatch) => {
   // dispatch is coming from the redux middleware
   dispatch({
     type: SEARCH_MOVIE,
@@ -18,10 +18,10 @@ export const searchMovie = (text) => (dispatch) => {
   });
 };
 
-export const fetchMovies = (text) => (dispatch) => {
+export const fetchMovies = (page = 1, text) => (dispatch) => {
   axios
     .get(
-      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${text}&language=en-US&page=1&include_adult=false`,
+      `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${text}&language=en-US&page=${page}&include_adult=false`,
     )
     .then((response) => {
       console.log(response);
@@ -29,15 +29,18 @@ export const fetchMovies = (text) => (dispatch) => {
         type: FETCH_MOVIES,
         payload: response.data.results,
         loading: false,
+        noMovies: (response.data.results.length === 0),
       });
     })
     .catch((error) => console.log(error));
 };
 
-export const fetchPopularMovies = () => (dispatch) => {
+export const fetchPopularMovies = (page = 1) => (dispatch) => {
+  console.log('page mlkklkfld');
+  console.log(page);
   axios
     .get(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1&include_adult=false`,
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false`,
     )
     .then((response) => {
       console.log(response);

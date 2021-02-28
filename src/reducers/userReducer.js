@@ -6,6 +6,9 @@ import {
   REMOVE_FROM_FAVORITES,
   REMOVE_FROM_BOOKMARKS,
   REMOVE_FROM_WATCHLIST,
+  FAVORITES,
+//   BOOKMARKS,
+//   WATCHLIST,
 } from '../actions/types';
 
 const initialState = {
@@ -18,6 +21,13 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
+    case FAVORITES:
+      return {
+        ...state,
+        text: 'Favorites',
+        loading: false,
+        favoritesMoviesList: action.payload,
+      };
     case ADD_TO_FAVORITES:
       return {
         ...state,

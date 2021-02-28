@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable react/jsx-filename-extension */
@@ -9,7 +10,7 @@ import MovieCard from './MovieCard';
 
 export const MoviesContainer = (props) => {
   const {
-    movies, text, type, favoritesMoviesList, bookmarkMoviesList, watchMoviesList,
+    movies, text, type, favoritesMoviesList, bookmarkMoviesList, watchMoviesList, popularMovies,
   } = props;
   let content = '';
   let moviesList = [];
@@ -23,12 +24,21 @@ export const MoviesContainer = (props) => {
     moviesList = bookmarkMoviesList;
   }
 
+  console.log('dsds dsd');
+  console.log(popularMovies);
+
+  if (popularMovies) {
+    moviesList = popularMovies;
+  }
+
   content = moviesList && moviesList.length > 0 ? (
-    moviesList.map((movie) => (
-      <MovieCard key={movie.id} movie={movie} />
+    moviesList.map((movie, index) => (
+      <MovieCard key={movie.id + index} movie={movie} />
     ))
   ) : text && text.length ? (
-    <p>Sorry, no results found!</p>
+    <p>
+      {' '}
+    </p>
   ) : null;
   return (
     <div className="row">
@@ -43,5 +53,6 @@ const mapStateToProps = (state) => ({
   bookmarkMoviesList: state.moviesList.bookmarkMoviesList,
   movies: state.movies.movies,
   text: state.movies.text,
+//   popularMovies: state.movies.popularMovies,
 });
 export default connect(mapStateToProps)(MoviesContainer);

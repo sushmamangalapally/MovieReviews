@@ -6,6 +6,9 @@ import {
   REMOVE_FROM_FAVORITES,
   REMOVE_FROM_BOOKMARKS,
   REMOVE_FROM_WATCHLIST,
+//   FAVORITES,
+//   BOOKMARKS,
+//   WATCHLIST,
   // LOADING
 } from './types.js';
 
@@ -79,3 +82,32 @@ export const removeFromBookmark = (movies, bookmark) => (dispatch) => {
 //         type: LOADING
 //     }
 // }
+
+// export const favorites = (movies) => (dispatch) => {
+//   console.log('moviessss');
+//   console.log(movies);
+//   const favMovies = localStorage.getItem('favMovies');
+//   if (favMovies) {
+//     dispatch({ type: FAVORITES, payload: favMovies });
+//   }
+// };
+
+// export const bookmarks = (movies) => (dispatch) => {
+//   console.log('moviessss');
+//   console.log(movies);
+//   const bookmarkMovies = localStorage.getItem('bookmarkMovies');
+//   // localStorage.setItem('favMovies', JSON.stringify(favMovies));
+//   if (bookmarkMovies) {
+//     dispatch({ type: BOOKMARKS, payload: bookmarkMovies });
+//   }
+// };
+
+// export const watchMovies = (movies) => (dispatch) => {
+//   console.log('moviessss');
+//   console.log(movies);
+//   const watchMoviesStorage = localStorage.getItem('watchMovies');
+//   // localStorage.setItem('favMovies', JSON.stringify(favMovies));
+//   if (watchMovies) {
+//     dispatch({ type: WATCHLIST, payload: watchMoviesStorage });
+//   }
+// };
