@@ -5,6 +5,7 @@ import {
   FETCH_MOVIE,
   LOADING,
   FETCH_POPULAR_MOVIES,
+  FETCH_MORE_POPULAR_MOVIES,
   FETCH_RANDOM_MOVIES,
 } from '../actions/types';
 
@@ -15,6 +16,8 @@ const initialState = {
   movie: [],
   randomMovies: [],
   noMovies: false,
+  popularMovie: 1,
+  searchedMovies: false,
 };
 
 export default function (state = initialState, action) {
@@ -25,6 +28,7 @@ export default function (state = initialState, action) {
         text: action.payload,
         movies: [],
         loading: false,
+        searchedMovies: true,
       };
     case FETCH_MOVIES:
       return {
@@ -49,12 +53,21 @@ export default function (state = initialState, action) {
         ...state,
         movies: action.payload,
         loading: false,
+        searchedMovies: false,
+      };
+    case FETCH_MORE_POPULAR_MOVIES:
+      return {
+        ...state,
+        movies: state.movies ? [...state.movies, ...action.payload] : action.payload,
+        loading: false,
+        searchedMovies: false,
       };
     case FETCH_RANDOM_MOVIES:
       return {
         ...state,
         randomMovies: action.payload,
         loading: false,
+        searchedMovies: false,
       };
     default:
       return state;

@@ -23,6 +23,8 @@ export const MoviesContainer = (props) => {
     moviesList = bookmarkMoviesList;
   }
 
+  console.log(moviesList);
+
   content = moviesList && moviesList.length > 0 ? (
     moviesList.map((movie) => (
       <MovieCard key={movie.id} movie={movie} />

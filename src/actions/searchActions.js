@@ -5,6 +5,7 @@ import {
   FETCH_MOVIE,
   LOADING,
   FETCH_POPULAR_MOVIES,
+  FETCH_MORE_POPULAR_MOVIES,
   FETCH_RANDOM_MOVIES,
 } from './types';
 // eslint-disable-next-line no-undef
@@ -44,6 +45,22 @@ export const fetchPopularMovies = () => (dispatch) => {
       console.log(response);
       return dispatch({
         type: FETCH_POPULAR_MOVIES,
+        payload: response.data.results,
+        loading: true,
+      });
+    })
+    .catch((error) => console.log(error));
+};
+
+export const fetchMorePopularMovies = (page) => (dispatch) => {
+  axios
+    .get(
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false`,
+    )
+    .then((response) => {
+      console.log(response);
+      return dispatch({
+        type: FETCH_MORE_POPULAR_MOVIES,
         payload: response.data.results,
         loading: true,
       });

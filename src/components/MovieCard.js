@@ -118,6 +118,7 @@ export const MovieCard = ({
   //   if (date > today) {
   //     notReleasedYet = true;
   //   }
+  //   console.log(movieInfo);
   let movieTitle = movieInfo.title;
   if (movieTitle.length > 35) {
     movieTitle = `${movieTitle.substr(0, 24)}...`;
