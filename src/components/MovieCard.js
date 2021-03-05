@@ -110,6 +110,19 @@ export const MovieCard = ({
   //     ? moviesList.favoritesMoviesList
   //     : null;
 
+  const date = new Date(movieInfo.release_date);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const dateReleased = date.toLocaleDateString('en-US', options);
+  //   const today = new Date();
+  //   let notReleasedYet = false;
+  //   if (date > today) {
+  //     notReleasedYet = true;
+  //   }
+  let movieTitle = movieInfo.title;
+  if (movieTitle.length > 35) {
+    movieTitle = `${movieTitle.substr(0, 24)}...`;
+  }
+
   return (
     <div className={changeMainStyle} key={index}>
       <div className="col-content ">
@@ -127,8 +140,8 @@ export const MovieCard = ({
           />
         </div>
         <div className="info-content">
-          <span>{movieInfo.title}</span>
-          <p>{movieInfo.release_date}</p>
+          <span>{movieTitle}</span>
+          <p>{dateReleased}</p>
           {/*
                             <Ratings index={index} id={details["id"]} get_rating={emptyRating} get_date={notReleasedYet}/>
                             <i className="iconsChange small material-icons"

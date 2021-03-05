@@ -22,6 +22,10 @@ export const MovieDetail = (props) => {
   const { movie, loading } = props;
   const genresArr = (movie && movie.genres) ? movie.genres.reduce((a, b) => [...a, b.name], []) : [];
   const genres = genresArr.join(', ');
+  const date = new Date(movie.release_date);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const dateReleased = date.toLocaleDateString('en-US', options);
+
   const movieDeets = (
     <main>
       <div className="container">
@@ -64,7 +68,7 @@ export const MovieDetail = (props) => {
                 <p>
                   Released:
                   {' '}
-                  {movie.release_date}
+                  {dateReleased}
                 </p>
               </div>
               <div className="card-action">
